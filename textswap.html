@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <img src="images/1.JPG" id="im1" height="300" width="300" >
+    <img src="images/2.JPG" id="im2" height="300" width="300">
+    
+    <button onclick="demo()">Swap</button>
+    <script>
+        function demo(){
+            var img1=document.getElementById("im1");
+            var img2=document.getElementById("im2");
+            var imgs1 =img1.src;
+            var imgs2 =img2.src;
+            img1.src=imgs2;
+            img2.src=imgs1;
+        }
+        setTimeout(demo, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<style>
+			div{
+				height:200px;
+				width:200px;
+				border:2px solid #ccc;
+				float:left;
+				margin-left:10px;
+				display:none;
+			}
+			#div2{
+			 border:2px solid red;
+			}
+		</style>
+		<script>
+			function demo(){
+				var d1=document.getElementById("div1");
+				var d2=document.getElementById("div2");
+				d1.style.display="block";
+				d2.style.display="none";
+			}
+			
+			function demo1(){
+				var d1=document.getElementById("div1");
+				var d2=document.getElementById("div2");
+				d2.style.display="block";
+				d1.style.display="none";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<button onclick="demo()" id="btn">Register</button>
+		<button onclick="demo1()" id="btn1">Login</button>
+	</body>
+</html>

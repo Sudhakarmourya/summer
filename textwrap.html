@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Swap Text</title>
+		<style>
+			h1{
+				 padding:10px;
+				 color:red;
+				 border:2px solid #ff0;			
+			}		
+		</style>
+		<script>
+		function demo(){
+			var t1=document.getElementById("txt1");
+			var t2=document.getElementById("txt2");
+			var swap1 = t1.innerText;
+			var swap2 = t2.innerText;
+			t1.innerText= swap2;
+			t2.innerText= swap1;
+		}
+		</script>
+	</head>
+	<body>
+		<h1 id="txt1">Techsima Solution Private Limited</h1>
+		<h1 id="txt2">Techsima Solution Private Limited in Ayodhya </h1>
+		<button onclick="demo()">Click Me </button>
+	</body>
+</html>

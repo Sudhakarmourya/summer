@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        div{
+            height:400px;
+            width:600px;
+            margin: 0px auto;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Slider</h1>
+    <div id="d"></div>
+    <script>
+        var arr=["HTML","JAVASCRIPT","CSS","PYTHON","JQUERY","PHP"];
+        var color=["red","white","blue","navy","purple","aqua"];
+        var background=["red","white","blue","navy","purple","aqua"];
+        var i=0;
+        function slider(){
+            var div1=document.getElementById("d");
+            div1.innerHTML=arr[i];
+            div1.style.color=color[i];
+            div1.style.background=background[i];
+            i++;
+            if(i==arr.length)
+            i=0;
+        }
+        setInterval("slider()",1000);
+    </script>
+  </body>
+</html>

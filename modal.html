@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+       .outer{
+        height:600px;
+        width:900px;
+        margin: 0px auto;
+        border:2px solid #000;
+
+       } 
+       .im{
+        height:160px;
+        width:160px;
+        object-fit: cover;
+        border:5px solid green;
+        padding:20px;
+        box-shadow:5px 5px 5px black inset;
+       }
+       .modal{
+        height:100%;
+        width:100%;
+        background:rgba(0,0,0,.6);
+        position:absolute;
+        top:0px;
+        padding-top:100px;
+        display:none;
+       }
+       .box{
+        height:460px;
+                width:620px;
+                background:white;
+                margin:0px auto;
+                text-align:center;
+                padding:20px 40px;
+                border:5px solid red;
+                background:linear-gradient(#9ed0db,red,blue);
+       }
+       .box img{
+        width:80%;
+                height:70%;
+                border:5px solid blue;
+                padding:20px ;
+                box-shadow:5px 5px 5px 10px black; 
+       }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+        <img src="images/1.JPG" class="im">
+    </div>
+    <div class="modal">
+        <div class="box">
+            <a href="modal.html">X</a>
+            <h1>Image gallery</h1>
+            <img src="images/1.JPG">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".im").click(function(){
+                $(".modal").css("display","block");
+                var a=$(this).attr("src");
+                $(".box img").attr("src",a);
+            })
+        })
+    </script>
+  </body>
+</html>

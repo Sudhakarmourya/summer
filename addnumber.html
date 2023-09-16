@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script>
+			function demo(){
+			var num1=document.getElementById("txt1").value;
+			var num2=document.getElementById("txt2").value;
+			var res=Number(num1)+ Number(num2);
+			var add=document.getElementById("addValue");
+			add.innerHTML="Result is="+ + res ;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1">
+		<input type="text" id="txt2">
+		<button onclick="demo()">Add Value</button>
+		<p id="addValue"></p>
+		
+	</body>
+</html>

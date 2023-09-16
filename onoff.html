@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <img src="images/2.JPG" id="im" height="100" width="100">
+    <input type="button" onclick="demo()" id="btn" Value="ON"/>
+    <script>
+        function demo(){
+        var img=document.getElementById("im")
+        var bn=document.getElementById("btn");
+        if(bn.value=="ON"){
+            bn.value="OFF";
+            img.src="images/1.JPG";
+            bn.style.background="green";
+
+        }else{
+            bn.value="ON";
+            img.src="images/2.JPG";
+            bn.style.background="red";
+        }
+    }
+    setTimeout("demo()",1000);
+    </script>
+  </body>
+</html>

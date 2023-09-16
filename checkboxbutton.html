@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body onload="demo()">
+    <input type="checkbox" id="checkme" checked>
+    <input type="submit" name="checkbutton"   id="send" disabled="disabled"  value="SEND"> 
+    <script>
+        // function demo(){
+        //     var c=document.getElementById('checkme');
+        //     var b=document.getElementById('send');
+        //     if( b.disabled==true){
+        //         c.checked=false; 
+        //         b.disabled=false; 
+        //     }else{
+        //         c.checked=true; 
+        //         b.disabled=true; 
+        //     }
+        // }
+        var c = document.getElementById('checkme');
+        var b = document.getElementById('send');
+        // when unchecked or checked, run the function
+        c.onchange = function(){
+        if(this.checked){
+            b.disabled = false;
+        } else {
+            b.disabled = true;
+        }
+
+        }
+    </script>
+  </body>
+</html>      
